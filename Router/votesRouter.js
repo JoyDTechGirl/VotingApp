@@ -2,7 +2,7 @@ const {addVote,getAllVotes,getTotalVotes,getWinner} = require("../Controller/vot
 
 const voteRouter = require("express").Router();
 
-voteRouter.post("/vote/:id", addVote);
+voteRouter.post("/vote", addVote);
 
 voteRouter.get("/vote",getAllVotes);
 voteRouter.get("/vote", getTotalVotes);
