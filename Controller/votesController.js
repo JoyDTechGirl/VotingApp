@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 
 exports.addVote = async (req, res) => {
   try {
-    const candidateId = req.params.id;
+    const candidateId = req.body.id;
     const candidate = await candidates.findByPk(candidateId);
 
     if (!candidate) {
