@@ -56,15 +56,12 @@ exports.getAllVotes = async (req, res) => {
       candidates: allCandidates,
     });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: error.message });
   }
 };
 
 
-
-
- exports.getTotalVotes = async (req, res) => {
+exports.getTotalVotes = async (req, res) => {
   try {
     const totalVotes = await candidates.sum("votes");
 
@@ -81,6 +78,7 @@ exports.getAllVotes = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 
 exports.getWinner = async (req, res) => {

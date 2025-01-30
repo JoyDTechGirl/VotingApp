@@ -6,8 +6,8 @@ exports.createCandidate = async (req, res) => {
   try {
     const data = {
       id: uuidv4(),
-      candidateName: req.body.candidatesName,
-      candidateParty: req.body.candidatesParty,
+      candidateName: req.body.candidateName,
+      candidateParty: req.body.candidateParty,
       Email: req.body.Email,
       votes: req.body.votes,
     };
@@ -26,13 +26,7 @@ exports.createCandidate = async (req, res) => {
 exports.getAllCandidates = async (req, res) => {
   try {
     const candidate = await candidates.findAll();
-    res
-      .status(200)
-      .json({
-        message: `Kindly Get All Candidates`,
-        "total number of candidates": candidate.length,
-        data: candidate,
-      });
+    res.status(200).json({message: `Connection to database has been established successfully`,"total number of candidates": candidate.length,data:candidate});
   } catch (err) {
     res
       .status(500)
