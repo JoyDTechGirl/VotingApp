@@ -7,10 +7,10 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "sql5760455",
+    "password": "ShKAD5vZHK",
+    "database": "sql5760455",
+    "host": "sql5.freesqldatabase.com",
     "dialect": "mysql"
   },
   "production": {
