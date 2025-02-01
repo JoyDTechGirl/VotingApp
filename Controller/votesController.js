@@ -16,9 +16,10 @@ exports.addVote = async (req, res) => {
     const regVote = await votes.create({
       id: uuidv4(),
       candidatesId: candidateId,
+      NoOfVotes: 0,
     });
 
-    candidate.votes += 1; 
+    // candidate.votes += 1; 
     await candidate.save();
 
     const updatedCandidate = await candidates.findByPk(candidateId);
